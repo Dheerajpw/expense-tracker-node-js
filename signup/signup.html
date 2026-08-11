@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+
+<body>
+
+    <form id="signupForm">
+
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Enter your password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Signup</button>
+
+    </form>
+
+    <div>
+        <a href="#">Existing User - Login</a>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            console.log({
+                name: name,
+                email: email,
+                password: password
+            });
+        });
+    </script>
+
+</body>
+</html>
